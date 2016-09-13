@@ -6,17 +6,22 @@ import java.util.Date;
  * Created by ijovanovic on 13.9.16..
  */
 public class Earthquake {
-    private String mMagnitude;
+    private double mMagnitude;
     private String mLocation;
-    private String mDate;
+    private long mTimeInMilliseconds;
+    private String mUrl;
 
-    public Earthquake(String magnitude, String location, String date) {
+    public Earthquake(double magnitude, String location, long timeInMilliseconds, String url) {
         this.mMagnitude = magnitude;
         this.mLocation = location;
-        this.mDate = date;
+        this.mTimeInMilliseconds = timeInMilliseconds;
+        this.mUrl = url;
     }
 
-    public String getMagnitude() { return mMagnitude; }
+    public double getMagnitude() { return mMagnitude; }
     public String getLocation() { return mLocation; }
-    public String getDate() { return mDate; }
+    public long getTimeInMilliseconds() {
+        return mTimeInMilliseconds;
+    }
+    public String getUrl() { return mUrl; }
 }
